@@ -8,6 +8,12 @@ Player:
 	ModularBot@HAL9001:
 		Name: HAL 9001
 		Type: hal9001
+	ModularBot@Hard:
+		Name: Hard AI
+		Type: hard
+	ModularBot@Brutal:
+		Name: Brutal AI
+		Type: brutal
 	GrantConditionOnBotOwner@cabal:
 		Condition: enable-cabal-ai
 		Bots: cabal
@@ -17,8 +23,14 @@ Player:
 	GrantConditionOnBotOwner@hal9001:
 		Condition: enable-hal9001-ai
 		Bots: hal9001
+	GrantConditionOnBotOwner@hard:
+		Condition: enable-hard-ai
+		Bots: hard
+	GrantConditionOnBotOwner@brutal:
+		Condition: enable-brutal-ai
+		Bots: brutal
 	SupportPowerBotModule:
-		RequiresCondition: enable-cabal-ai || enable-watson-ai || enable-hal9001-ai
+		RequiresCondition: enable-cabal-ai || enable-watson-ai || enable-hal9001-ai || enable-hard-ai || enable-brutal-ai
 		Decisions:
 			Airstrike:
 				OrderName: AirstrikePowerInfoOrder
@@ -212,7 +224,7 @@ Player:
 			sam: 7
 			fix: 1
 	BuildingRepairBotModule:
-		RequiresCondition: enable-cabal-ai || enable-watson-ai || enable-hal9001-ai
+		RequiresCondition: enable-cabal-ai || enable-watson-ai || enable-hal9001-ai || enable-hard-ai || enable-brutal-ai
 	SquadManagerBotModule@cabal:
 		RequiresCondition: enable-cabal-ai
 		SquadSize: 15
